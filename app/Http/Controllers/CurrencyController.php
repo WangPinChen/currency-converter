@@ -28,11 +28,8 @@ class CurrencyController extends Controller
     public function convert(ConvertCurrencyRequest $convertCurrencyRequest): JsonResponse
     {
         try {
-            
-            // $validated = $this->convertCurrencyRequest->validated();
-            // $result = $this->currencyService->convertCurrency($validated);
-            var_dump(123);
-            exit;
+            $validated = $convertCurrencyRequest->validated();
+            $result = $this->currencyService->convertCurrency($validated);
 
             return response()->json($result);
         } catch (Exception $e) {

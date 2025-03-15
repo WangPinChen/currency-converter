@@ -32,4 +32,23 @@ class CurrencyRepository
 
         return null;
     }
+
+    /**
+     * Get currency by code
+     * 
+     * @param string $code
+     * @return array|null
+     */
+    public function getByCode(string $code): ?array
+    {
+        $currencies = Currency::getExchangeRates();
+
+        foreach ($currencies as $currencyData) {
+            if ($currencyData['base_currency'] === $code) {
+                return $currencyData;
+            }
+        }
+
+        return null;
+    }
 }
