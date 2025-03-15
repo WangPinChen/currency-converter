@@ -6,8 +6,9 @@ use App\Models\Currency;
 
 /**
  * CurrencyRepository
- * 
  * This class is responsible for handling currency data.
+ * 
+ * @author Wang Pin Chen <r17369@gmail.com>
  */
 class CurrencyRepository
 {

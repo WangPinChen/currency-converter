@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use App\Repositories\CurrencyRepository;
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Validator;
 
 /**
  * Convert Currency Request
@@ -17,6 +18,7 @@ class ConvertCurrencyRequest extends FormRequest
     /**
      * Constructor
      * 
+     * @param CurrencyRepository $currencyRepository
      * @return void
      */
     public function __construct(private CurrencyRepository $currencyRepository){}
@@ -38,9 +40,10 @@ class ConvertCurrencyRequest extends FormRequest
     /**
      * Custom validation rules and messages
      * 
+     * @param Validator $validator
      * @return array<string, string>
      */
-    public function withValidator($validator)
+    public function withValidator(Validator $validator)
     {
         $validator->addExtension('isExist', function ($attribute, $value, $parameters) {
             $currency = $this->currencyRepository->getByCode($value);

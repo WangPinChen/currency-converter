@@ -4,6 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Currency
+ * This class is responsible for handling the currency model.
+ * 
+ * @author Wang Pin Chen <r17369@gmail.com>
+ */
 class Currency extends Model
 {
     /**
@@ -31,7 +37,7 @@ class Currency extends Model
      * 
      * @return array
      */
-    public static function getExchangeRates()
+    public static function getExchangeRates(): array
     {
         return [
             [

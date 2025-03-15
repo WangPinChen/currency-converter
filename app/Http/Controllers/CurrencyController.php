@@ -9,6 +9,8 @@ use Illuminate\Http\JsonResponse;
 
 /**
  * CurrencyController
+ * 
+ * @author Wang Pin Chen <r17369@gmail.com>
  */
 class CurrencyController extends Controller
 {
@@ -23,6 +25,7 @@ class CurrencyController extends Controller
     /**
      * Convert currency
      * 
+     * @param ConvertCurrencyRequest $convertCurrencyRequest
      * @return JsonResponse
      */
     public function convert(ConvertCurrencyRequest $convertCurrencyRequest): JsonResponse
