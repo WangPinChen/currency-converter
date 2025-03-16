@@ -1,41 +1,40 @@
-# 專案安裝與運行指南
+# Project Installation and Setup Guide
 
-## 安裝
+## Installation
 
-1. **克隆專案**
+1. **Clone the Project**
    ```sh
    git clone https://github.com/WangPinChen/currency-converter.git
    cd currency-converter
    ```
 
-2. **安裝相依套件**
+2. **Install Dependencies**
    ```sh
    composer install
    ```
 
-## 運行專案
-
-1. **啟動內建伺服器**
+3. **Set up the Environment File (.env)**
    ```sh
-   php artisan serve --port=8000
+   cp .env.example .env
    ```
-   預設會在 `http://localhost:8000` 運行專案。
 
-2. **確認專案是否正常運行**
-   瀏覽器開啟 `http://localhost:8000`，應該會看到 Laravel 預設首頁。
-
-## 使用 /api-doc 進行測試
-
-1. **開啟 API 文件**
-   確保專案已運行，然後在瀏覽器輸入：
+4. **Generate Application Key**
+   ```sh
+   php artisan key:generate
    ```
-   http://localhost:8000/api-doc
+## Running the Project
+
+1. **Start the Built-in Server**
+   Access the API Documentation Ensure the project is running, and then open your browser and navigate to: 
+   
    ```
-   這將會載入 Swagger UI，並顯示可用的 API 端點。
+   http://localhost:8000/api-doc`
+   ``
 
-2. **測試 API**
-   - 選擇 API 端點
-   - 填寫必要的參數
-   - 點擊 `Send API Request` 執行 API 請求
-   - 查看回應結果
+   This will load the Swagger UI and display the available API endpoints.
 
+2. **Test with /api-doc**
+   - Select an API endpoint
+   - Fill in the required parameters
+   - Click Send API Request to execute the API request
+   - Review the response results
