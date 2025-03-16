@@ -38,3 +38,5 @@
    - Fill in the required parameters
    - Click Send API Request to execute the API request
    - Review the response results
+
+   ![Alt text](https://i.imgur.com/AcxZ0bi.jpeg)
