@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
  * Currency
  * This class is responsible for handling the currency model.
  * 
+ *  @OA\Schema(
+ *   schema="Currency",
+ *   title="Currency Model",
+ *   description="The currency model",
+ *   @OA\Property(property="base_currency", type="string", description="The base currency", maxLength=3),
+ *   @OA\Property(property="last_updated", type="string", description="The last updated date time", format="date-time"),
+ *   @OA\Property(property="rates", type="array", description="The exchange rates", @OA\Items(type="number")),
+ * )
+ * 
  * @author Wang Pin Chen <r17369@gmail.com>
  */
 class Currency extends Model
