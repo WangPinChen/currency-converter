@@ -29,7 +29,7 @@
    
    ```
    http://localhost:8000/api-doc`
-   ``
+   ```
 
    This will load the Swagger UI and display the available API endpoints.
 
