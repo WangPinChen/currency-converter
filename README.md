@@ -22,17 +22,23 @@
    ```sh
    php artisan key:generate
    ```
+
 ## Running the Project
 
 1. **Start the Built-in Server**
-   Access the API Documentation Ensure the project is running, and then open your browser and navigate to: 
-   
+   ```sh
+   php artisan serve --port=8000
    ```
-   http://localhost:8000/api-doc`
-   ```
+   By default, the project will run at http://localhost:8000.
+2. Verify the Project is Running Open your browser and navigate to http://localhost:8000. You should see the default Laravel homepage.
 
+## Test with /api-doc
+
+1. Access the API Documentation Ensure the project is running, and then open your browser and navigate to:
+   ```sh
+   http://localhost:8000/api-doc
+   ```
    This will load the Swagger UI and display the available API endpoints.
-
 2. **Test with /api-doc**
    - Select an API endpoint
    - Fill in the required parameters
