@@ -34,9 +34,9 @@ class CurrencyController extends Controller
      *       required=true,
      *       @OA\JsonContent(
      *         required={"from_currency", "to_currency", "amount"},
-     *         @OA\Property(property="from_currency", type="string", description="The from currency", maxLength=3),
-     *         @OA\Property(property="to_currency", type="string", description="The to currency", maxLength=3),
-     *         @OA\Property(property="amount", type="number", description="The amount to convert"),
+     *         @OA\Property(property="from_currency", type="string", description="The from currency", maxLength=3, example="USD"),
+     *         @OA\Property(property="to_currency", type="string", description="The to currency", maxLength=3, example="TWD"),
+     *         @OA\Property(property="amount", type="number", description="The amount to convert", example=100),
      *       )
      *     ),
      *     @OA\Response(
